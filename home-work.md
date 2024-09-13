@@ -12,3 +12,6 @@
 
 ## 3
 ![alt text](image-2.png)
+
+### 4 
+- Notionda o'tilgan darslarni note qilish 1, 2, 3, 4 ni bitta bitta tekshiriladi `AI` ishlatildimi yo'qmi deb
