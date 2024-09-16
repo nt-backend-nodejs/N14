@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>CSS Display</title>
+  <style>
+    ul.parent {
+      display: flex;
+      justify-content: space;
+      background-color: greenyellow;
+      padding: 0px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      justify-items: center;
+      align-items: center;
+    }
+
+    li {
+      background: skyblue;
+      border: 1px solid black;
+      padding: 12px;
+      margin: 8px;
+      list-style: none;
+    }
+
+    li:hover {
+      color: #ffff;
+      background-color: blue;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <dev class="logo">
+        logo
+      </dev>
+      <div class="menu">
+
+        <ul class="parent">
+          <li>Home</li>
+          <li>About</li>
+          <li>Gallery</li>
+          <li>Blogs</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>
