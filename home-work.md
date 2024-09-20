@@ -97,9 +97,9 @@ repeat("salom",2) => "salom salom"
 
 # Leetcode
 
-1  [383. Ransom Note](https://leetcode.com/problems/ransom-note/)
-2  [1370. Increasing Decreasing String](https://leetcode.com/problems/increasing-decreasing-string/description/)
-3  [796. Rotate String](https://leetcode.com/problems/rotate-string/description/)
+1.  [383. Ransom Note](https://leetcode.com/problems/ransom-note/)
+2.  [1370. Increasing Decreasing String](https://leetcode.com/problems/increasing-decreasing-string/description/)
+3.  [796. Rotate String](https://leetcode.com/problems/rotate-string/description/)
 
 
 
