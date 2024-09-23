@@ -102,8 +102,7 @@ repeat("salom",2) => "salom salom"
 3.  [796. Rotate String](https://leetcode.com/problems/rotate-string/description/)
 
 
-
-
+-------
 
 # **Bonus** ( Buni o'z ustida ishlamoqchi bo'lganlar ishlasa bo'ladi majburiy emas ammo bonus bal qo'shiladi!.)
 # HOME WORK
