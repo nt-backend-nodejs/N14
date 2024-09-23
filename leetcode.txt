@@ -1,0 +1,78 @@
+Example 1:
+
+Input: ransomNote = "a", magazine = "b"
+Output: false
+
+Example 2:
+
+Input: ransomNote = "aa", magazine = "ab"
+Output: false
+
+Example 3:
+
+Input: ransomNote = "aa", magazine = "aab"
+Output: true
+
+
+Example 4:
+
+Input: ransomNote = "aab", magazine = "baa"
+Output: true
+
+{
+  a: 2
+  b:1
+}
+
+{
+  a:2
+  b: 1
+}
+
+
+
+
+----------------------------------------
+
+
+
+
+Example 1:
+
+{
+  a:4
+  b:4
+  c:4
+}
+abch cba abc cba
+
+Input: s = "aaaabbbbcccc"
+Output: " abc cba abc cba"
+Explanation: After steps 1, 2 and 3 of the first iteration, result = "abc"
+After steps 4, 5 and 6 of the first iteration, result = "abccba"
+First iteration is done. Now s = "aabbcc" and we go back to step 1
+After steps 1, 2 and 3 of the second iteration, result = "abccbaabc"
+After steps 4, 5 and 6 of the second iteration, result = "abccbaabccba"
+
+Example 2:
+
+Input: s = "rat"
+Output: "art"
+Explanation: The word "rat" becomes "art" after re-ordering it with the mentioned algorithm.
+
+
+
+----------------------------
+
+
+
+
+Example 1:
+
+Input: s = "abcde", goal = "abcde"
+Output: true
+
+Example 2:
+
+Input: s = "abcde", goal = "abced"
+Output: false
