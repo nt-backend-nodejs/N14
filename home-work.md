@@ -237,7 +237,7 @@
   Bilmasvoy matematikaga qiziqib qoldi. Misollar ishlashni ham boshladi. Lekin 
   ni hisoblashda biroz qiynalyapti. Siz bu ifodani hisoblashda Bilmasvoyga yordam bering.
 
-  !x["sasa"](pictures/formula.png)
+  ![](pictures/formula.png)
 
   ---
 
