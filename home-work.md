@@ -136,6 +136,11 @@
 
 -----------------
 
+# LEETCODE
+
+1. [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/description/)
+
+----
 
   # 11-dars. HOME WORK MASALALAR
 
@@ -231,38 +236,9 @@
     **Input:** nums = [1,2,3,1,2,3], k = 2
     **Output:** false
 
+----
 
-  5.  Bilmasvoy matematikada
-
-  Bilmasvoy matematikaga qiziqib qoldi. Misollar ishlashni ham boshladi. Lekin 
-  ni hisoblashda biroz qiynalyapti. Siz bu ifodani hisoblashda Bilmasvoyga yordam bering.
-
-  ![](pictures/formula.png)
-
-  ---
-
-  Kiruvchi ma'lumotlar:
-
-  Sizga yagona qatorda a, b, c , d natural sonlari beriladi(1 ≤ a, b ≤ 1018, 1 ≤ c, d ≤ 10 500000 ).
-
-  ---
-
-  Chiquvchi ma'lumotlar:
-
-  Ifoda qiymatining 109+7 ga bo'lgandagi qoldiqni chop eting!
-
-  ---
-
-  Misollar
-
-  | #   | input   | output |
-  | --- | ------- | ------ |
-  | 1   | 1 1 1 1 | 1      |
-
-
-  ------
-
-  6. Defis - bu chiziqcha
+  5. Defis - bu chiziqcha
 
   S matn yoki so'z beriladi. Sizning vazifangiz ushbu matndagi so'zlarni [defis](https://uz.wikipedia.org/wiki/Defis) bilan ajratishingiz kerak. Matndagi so'z 10 belgidan oshsa so'zning o'rtasiga defis qo'yilgan holda ikkiga bo'lib, agar matndagi so'z 10 belgidan oshsa va belgilar soni toq bo'lib qolsa so'zining ikkinichi tomoniga ortiqcha bo'lib qolgan belgini qo'shib ikkiga bo'lingan holda chop eting.
 
@@ -289,33 +265,13 @@
   | 3   | Bilmasvoyta'tilda        | Bilmasvo-yta'tilda       |
 
   ----
-  7. ASCII code chiqarish
+  6. ASCII code chiqarish
   > function bitta paramert olsin u string ko'rinishda yoki son shu kiritilgan parametrini **ascii** codeni chiqarishi kerak
 
 
-  ---
-  8. Find the Largest Even Number
-
-  > Write a function that finds the largest number in an array `nums` that is also even. If there is no even number, return `-1`.
-
-  > Eng katta juft sonni qaytaradigan function yarating u array qabul qilsin.
-  ### Examples
-
-  ```js
-  largestEven([3, 7, 2, 1, 7, 9, 10, 13]) ➞ 10
-
-  largestEven([1, 3, 5, 7]) ➞ -1
-
-  largestEven([0, 19, 18973623]) ➞ 0
-  ```
-  -----
-  9. Loop ishlatgan holatda shahmat doskasini chiqarish
-
-  ![](pictures/check-desk.png)
-
 
   ----
-  ==BONUS==
+# BONUS
 
   ## White Spaces Between Lower and Uppercase Letters
 
