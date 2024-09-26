@@ -7,7 +7,7 @@
 1. WeakMap & WeakSet haqida notionga ma'lumot yozish nima nima uchun chiqarilgan nima avzalligi va kamchiligi bor example bilan birga.
 2. 'use stric' - nima ekanini o'rganib kelish.
 3. **Destructuring, Date, JSON (JavaScript Object Notation).** shu mavzuni bo'yich o'tganib kelish.
-4. Masalalardan kamicta 4 tasini ishlab kelish, Qolgani bonus!!!
+4. Masalalardan kamida ***4ta***sini ishlab kelish, Qolgani bonus!!!
 
 ---
 
