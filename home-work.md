@@ -1,11 +1,9 @@
----
-id: Course.md
-date: 2024-10-04
-type:
-  - course
-title: 15-dars. OOP va prototiplar, Vorislik (Class, xususiyat, metod, getter va setter, ...)
----
 # HOME WORK
+
+----
+# Leetcode
+1. [2942. Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/description)
+
 
 ----
 1.
