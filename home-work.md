@@ -1,5 +1,10 @@
 # 17-dars. Fetch va axios HOME WORK
 
+---
+# Leetcode
+1. [3248. Snake in Matrix](https://leetcode.com/problems/snake-in-matrix/description/)
+---
+
 1.
 https://handlers.education.launchcode.org/static/planets.json
 shu url yordamida namelarni arrayga yig'gib qaytarib bersin
