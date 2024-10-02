@@ -1,10 +1,10 @@
-const URI = "https://jsonplaceholder.typicode.com/todos"
+const URI = "https://api.github.com/users"
 
 
 
-const getUserData = async (URI)=>{
+const getUserData = async (URI, username)=>{
   try{
-    const response = await fetch(URI)
+    const response = await fetch(`${URI}/${username}`)
     const userData  = await response.json()
     console.log(userData)
   } catch(e){
@@ -14,4 +14,4 @@ const getUserData = async (URI)=>{
 
 
 
-getUserData(URI)
+getUserData(URI, "xam1dullo")
