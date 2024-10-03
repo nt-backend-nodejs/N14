@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+
+<body>
+
+  <div class="box">
+
+  </div>
+
+
+
+  <script>
+    const divBoxElement = document.querySelector(".box")
+    divBoxElement.style.padding = "10px"
+    divBoxElement.style.backgroundColor = "blue"
+
+    const h1Element = document.createElement("h1")
+    h1Element.innerHTML = "SALOM DOM"
+    h1Element.style.backgroundColor = "red"
+    h1Element.style.padding = "10px"
+
+    const pElement = document.createElement("p")
+    pElement.innerHTML = "SALOM DOM P"
+    pElement.style.backgroundColor = "red"
+    pElement.style.padding = "10px"
+
+    divBoxElement.appendChild(h1Element)
+    divBoxElement.appendChild(pElement)
+
+
+  </script>
+
+</body>
+
+</html>

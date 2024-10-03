@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table border="1">
+    <thead>
+
+      <tr>
+        <th>ID</th>
+        <th>UserId</th>
+        <th>Title</th>
+        <th>completed</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+
+  </table>
+
+
+
+  <script>
+    const tableBody = document.querySelector("tbody");
+
+
+    const url = " https://jsonplaceholder.typicode.com/todos";
+
+    const getUserData = async function () {
+      const res = await fetch(url)
+
+      if (!res.ok) { throw new Error("Invalid Link"); }
+
+      const users = await res.json()
+      return users
+    }
+
+
+
+    const tableCreateElement = ({ userId, id, title, completed }) => {
+
+      const trElement = document.createElement("tr")
+      const userIdTdElement = document.createElement("td")
+      userIdTdElement.innerHTML = userId
+
+      const idTdElement = document.createElement("td")
+      idTdElement.innerHTML = id
+
+      const titleTdElement = document.createElement("td")
+      titleTdElement.innerHTML = title
+
+      const cmpElement = document.createElement("td")
+      cmpElement.innerHTML = completed
+      trElement.appendChild(userIdTdElement)
+      trElement.appendChild(idTdElement)
+      trElement.appendChild(titleTdElement)
+      trElement.appendChild(cmpElement)
+      return trElement
+    }
+
+
+    const addUserData = async function () {
+      const users = await getUserData()
+      console.log(users)
+      users.forEach(user => {
+        const userTableElement = tableCreateElement(user)
+        tableBody.appendChild(userTableElement)
+      });
+    }
+
+    addUserData()
+
+  </script>
+</body>
+
+</html>
