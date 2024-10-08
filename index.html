@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <style>
+    .test {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <form>
+    <input type="email" name="email" id="email">
+    <br>
+    <input type="password" name="password" id="password">
+    <br>
+    <button type="submit">SEND</button>
+  </form>
+
+
+  <script>
+    const form = document.querySelector("form")
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault()
+      // console.log(e.form)
+
+      const person = {
+        email:"Sasa",
+        password:'1234'
+      }
+
+
+      const res=  await fetch("url",{
+        method:"POST",
+        body:JSON.stringify(person)
+      })
+    })
+
+  </script>
+  <!-- <h1 id="box">Hello</h>
+
+    <div id="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, tempore.</p>
+    </div>
+
+
+    <button id="red">
+      Qizil
+    </button>
+
+    <button id="blue">
+      Ko'k
+    </button> -->
+
+
+  <script>
+    // const h1Element = document.querySelector("h1")
+    // const h1Element = document.querySelector("h1")
+    // console.log(h1Element)
+    // h1Element.style.color = "red"
+    // h1Element.style.fontSize = "22px"
+
+    /* 
+    1. id
+    2. class
+    3. tagName
+    4. css
+    */
+
+    // const h1 = document.getElementById("box")
+    // h1.classList.add("test");
+    // // h1.setAttribute("class", "test")
+    // const idBoxElement = document.querySelectorAll("#box")
+
+    // console.log(idBoxElement);
+
+
+
+    // document.addEventListener("keydown", (e) => {
+    //   if (e.ctrlKey && e.key === "a") {
+    //     alert("Pressed")
+    //     console.log("CTRL and A pressed")
+    //   }
+    // })
+
+
+
+
+    // const btn = document.querySelector("button")
+
+    // btn.addEventListener("click", () => {
+    //   document.body.style.backgroundColor = "red"
+    //   document.body.style.color = "#fff"
+
+    // })
+
+
+
+
+
+
+
+    // const redBtnElement = document.querySelector("#red")
+    // redBtnElement.addEventListener("click", () => {
+    //   document.body.style.backgroundColor = "red"
+    //   document.body.style.color = "#fff"
+
+    // })
+
+    // const blueBtnElement = document.querySelector("#blue")
+
+    // blueBtnElement.addEventListener("click", () => {
+    //   document.body.style.backgroundColor = "blue"
+    //   document.body.style.color = "#fff"
+    // })
+
+
+
+
+
+  </script>
+</body>
+
+</html>
