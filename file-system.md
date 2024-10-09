@@ -1,4 +1,4 @@
-**Bayroqlar Jadvali**
+# 1 **Bayroqlar Jadvali**
 
 Node.js'dagi **fs** modulida fayllarni ochish uchun ishlatiladigan **string bayroqlar** va ularning tavsiflari quyidagi jadvalda keltirilgan:
 
@@ -142,7 +142,7 @@ fs.open('data.txt', 'w+', (err, fd) => {
 ```
 
 ---
-**Raqamli Bayroqlar Jadvali**
+# 2 **Raqamli Bayroqlar Jadvali**
 
 Node.js'dagi **fs** modulida fayllarni ochish uchun ishlatiladigan **raqamli bayroqlar** ham mavjud. Bu bayroqlar **`fs.constants`** obyektida saqlanadi va ular POSIX bayroqlariga mos keladi. Raqamli bayroqlarni ishlatish orqali siz fayllarni ochish usulini yanada nozik sozlashingiz mumkin.
 
@@ -278,7 +278,7 @@ Node.js'dagi **fs** moduli fayl tizimi bilan ishlash imkonini beradi va u faylla
 
 ---
 
-## Fayl Ruxsatnomalari (File Modes)
+# 3 ## Fayl Ruxsatnomalari (File Modes)
 
 ### Tavsif
 
