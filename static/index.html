@@ -4,15 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <title>Http and Websocket</title>
 </head>
 
 <body>
-    <h1>HELLO HTTP</h1>
+    <h1>HELLO WS</h1>
+
+
+
+    <form action="/chat" method="post">
+
+        <label for="message">Message</label>
+        <br>
+        <input type="text" placeholder="message" autocomplete="off">
+
+        <button type="submit">Send</button>
+    </form>
 
     <br>
-    <img src="./image.png" alt="bir nima">
+    <h2>Messages</h2>
+    <ul>
+
+
+    </ul>
+
+    <!-- <br> -->
+
+    <!-- <img src="./image.png" alt="bir nima"> -->
+    <script>
+
+        const form = document.querySelector("form")
+        const ul = document.querySelector("ul")
+        const input = document.querySelector("input")
+
+
+        // Create WebSocket connection.
+        const socket = new WebSocket("ws://localhost:5050");
+
+        // Connection opened
+        socket.addEventListener("open", (event) => {
+            socket.send("Hello Server!");
+        });
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const message = input.value
+            socket.send(message);
+
+            input.innerText = " "
+        })
+        // Listen for messages
+
+        socket.addEventListener("message", (event) => {
+            const li = document.createElement("li")
+
+            li.innerText = event.data
+            ul.appendChild(li)
+            console.log("Message from server ", event.data);
+        });
+
+    </script>
 </body>
 
 </html>
