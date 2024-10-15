@@ -1,13 +1,10 @@
 import express from "express";
-
 const PORT = 3001
 
+// Application
 const app = express()
-
-
 // MIDDLEWARE
 app.use(express.json())
-
 app.use((req, res, next) => {
   console.log({
     METHOD: req.method,
@@ -16,21 +13,33 @@ app.use((req, res, next) => {
   next()
 })
 
+let todos = [
+  {
+    id: 1,
+    title: "something",
+    date: "2024-10-15T10:19:00.421Z"
+  },
+  {
+    id: 2,
+    title: "anything",
+    date: "2024-10-15T10:19:00.421Z"
+  },
+  {
+    id: 3,
+    title: "home work",
+    date: "2024-10-15T10:19:00.421Z"
+  }
 
-let todos = [{
-  id: 1,
-  title: "something",
-  date: "2024-10-15T10:19:00.421Z"
-}]
+]
 
 //GET ALL TODOS
-app.get("/todo", (req, res) => {
+app.get("/todos", (req, res) => {
   res.send(todos)
 })
 
 
 //GET ONE TODOS with :id
-app.get("/todo/:id", (req, res) => {
+app.get("/todos/:id", (req, res) => {
   const id = Number(req.params.id)
 
   const todo = todos.find(todo => todo.id === id)
@@ -42,7 +51,7 @@ app.get("/todo/:id", (req, res) => {
 
 
 // CREATE TODO
-app.post("/todo", (req, res) => {
+app.post("/todos", (req, res) => {
   const body = req.body
   if (!body.title) {
     res.status(400).send({ message: "Title must have" })
@@ -56,7 +65,7 @@ app.post("/todo", (req, res) => {
 
 
 // Update  TODO 
-app.put("/todo/:id", (req, res) => {
+app.put("/todos/:id", (req, res) => {
   const body = req.body
   const id = parseInt(req.params.id)
   if (!body.title) {
