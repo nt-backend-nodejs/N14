@@ -1,0 +1,16 @@
+{
+  "name": "n-14",
+  "version": "1.0.0",
+  "description": "Bootcamp Full Stack (NodeJS+VueJS) N14",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
