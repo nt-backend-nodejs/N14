@@ -1,27 +1,18 @@
-
 import express from "express";
-
+import { createUserController, deleteUserController, getUsersController, updateUserController } from "../controllers/user.controller.js"
+import { userLoggerMiddleware } from '../middlewares/user.logger.middleware.js';
 
 const router = express.Router()
 
-router.get("/", (req, res) => {
-  res.send("users ")
-})
+router.get("/", userLoggerMiddleware, getUsersController)
 
+router.get("/all", getUsersController)
 
-router.post("/", (req, res) => {
-  res.send("users ")
-})
+router.post("/", createUserController)
 
+router.put("/:id", updateUserController)
 
-router.put("/:id", (req, res) => {
-  res.send("users ")
-})
-
-
-router.delete("/:id", (req, res) => {
-  res.send("users ")
-})
+router.delete("/:id", deleteUserController)
 
 
 export default router
