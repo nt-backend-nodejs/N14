@@ -1,31 +1,18 @@
 import express from "express";
-import userRouter from "./routes/user.router.js"
-import productsRouter from "./routes/product.router.js"
+import dotenv from 'dotenv';
+import { authRouter, debtRouter, profileRouter } from "./routes/index.js";
 
-import authRouter from "./routes/auth.router.js"
-
+dotenv.config()
+const PORT = process.env.PORT
 
 const app = express()
 app.use(express.json())
 
-// app.use(loggerMiddleware)
-
-
-//AUTH
 app.use("/auth", authRouter)
+app.use("/profile", profileRouter)
+app.use("/debt", debtRouter)
 
 
-// app.use("/users", userRouter)
-// app.use("/products", productsRouter)
-
-//ERROR MIDDLEWARE
-app.use((err, req, res, next) => {
-  const { message, name, stack } = err
-
-  res.status(400).send({ message, name, stack })
-})
-
-
-app.listen(3000, () => {
-  console.log(3000)
+app.listen(PORT, () => {
+  console.log(`Server is running on port:${PORT}`)
 })
