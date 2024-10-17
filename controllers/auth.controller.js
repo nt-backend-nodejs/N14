@@ -62,3 +62,23 @@ export const getUserController = (req, res, next) => {
     next(error)
   }
 }
+
+
+
+export const testController = (req, res, next) => {
+  const authHeader = req.headers['authorization'];
+
+  if (!authHeader) {
+    res.setHeader('WWW-Authenticate', 'Basic');
+    return res.status(401).send('Autentifikatsiya talab qilinadi.');
+  }
+
+  // 'Basic base64string' formatini ajratish
+  const base64Credentials = authHeader.split(' ')[1];
+  const credentials = Buffer.from(base64Credentials, 'base64').toString('ascii');
+  const [username, password] = credentials.split(':');
+
+
+
+  res.send({ username, password })
+}
