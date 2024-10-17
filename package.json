@@ -4,7 +4,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "star:dev": "node --watch server.js"
+    "start:dev": "node --watch server.js"
   },
   "keywords": [],
   "author": "",
