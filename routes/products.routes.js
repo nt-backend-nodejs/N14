@@ -1,4 +1,6 @@
 import express from "express";
+import { validationProductMidd } from '../middlewares/index.js';
+
 
 export const productsRouter = express.Router()
 
@@ -10,7 +12,7 @@ productsRouter.get("/")
 productsRouter.get("/")
 
 //CREATE
-productsRouter.post("/")
+productsRouter.post("/", validationProductMidd)
 
 //UPDATE BY ID
 productsRouter.put("/:id")
