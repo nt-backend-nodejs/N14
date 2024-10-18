@@ -1,0 +1,23 @@
+[
+  {
+    "email": "{{email}}",
+    "password": "{{password}}",
+    "fullname": "Yusupov Asadulloh",
+    "age": 18,
+    "gender": "MALE",
+    "phone": "+998937034407",
+    "addr": "Toshkent",
+    "card": "1234 5678 1234 5678"
+  },
+  {
+    "email": "test@test.com",
+    "password": "$2b$10$nKnr/xK/eTjNo4rT9M7qLOpr/r.cNEDZjR.Kpr3F8ySi/KZwz0Lw6",
+    "fullname": "Yusupov Asadulloh",
+    "age": 18,
+    "gender": "MALE",
+    "phone": "+998937034407",
+    "addr": "Toshkent",
+    "card": "1234 5678 1234 5678",
+    "id": "7d1643e1-f580-467e-a0c1-fba45753509c"
+  }
+]
