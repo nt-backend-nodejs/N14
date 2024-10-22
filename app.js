@@ -1,1 +1,2 @@
-slknflsndglnsdlkfnlk
+export let a = "hello"
+
