@@ -1,98 +1,47 @@
-1. https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan-v2&envId=top-sql-50
-2. https://leetcode.com/problems/add-two-promises/description/?envType=study-plan-v2&envId=30-days-of-javascript
+### Uyga Vazifa: Kitoblar Boshqaruvi Tizimi uchun Ma'lumotlar Bazasi
 
+#### Vazifalar Ro'yxati
 
-# library store
-1. Books
-2. Authors
-3. BookAuthors (junction table for many-to-many relationship)
-4. Publishers
-5. Categories
-6. Customers
-7. Orders
-8. OrderItems
+**Kun 1: Ma'lumotlar Bazasini Yaratish va Jadval Tuzish**
 
----
-## 1. Books Table
-Columns:
-book_id (Primary Key): Unique identifier for each book.
-- title: Title of the book.
-- publisher_id (Foreign Key): References the Publishers table.
-- publication_year: Year the book was published.
-- isbn: International Standard Book Number.
-- price: Selling price of the book.
-- category_id (Foreign Key): References the Categories table.
-- stock_quantity: Number of copies available in inventory.
+##### Mualliflar Jadvali
+- **id**: Jadvalning asosiy kaliti (Primary Key), avtomatik oshiriladigan, butun son (`SERIAL`).
+- **ism**: Muallifning ismi, matn turi (`VARCHAR`).
+- **tugilgan_yili**: Muallifning tug'ilgan yili, sanani saqlash uchun (`DATE`).
 
-## 2. Authors Table
-Purpose: Contains information about authors who have written books.
-Columns:
-- author_id (Primary Key): Unique identifier for each author.
-- first_name: Author's first name.
-- last_name: Author's last name.
-- bio: Short biography of the author.
+##### Kitoblar Jadvali
+- **id**: Jadvalning asosiy kaliti (Primary Key), avtomatik oshiriladigan, butun son (`SERIAL`).
+- **nomi**: Kitob nomi, matn turi (`VARCHAR`).
+- **muallif_id**: Mualliflar jadvalidagi muallifning identifikatoriga bog'lanish (Foreign Key), butun son (`INTEGER`), mualliflar jadvalidagi `id` ustuniga bog'liq.
+- **narxi**: Kitob narxi, o'nlik son (`DECIMAL` yoki `NUMERIC`).
+- **sahifa_soni**: Kitobning sahifa soni, butun son (`INTEGER`).
 
-## 3. BookAuthors Table (Junction Table)
-Purpose: Resolves the many-to-many relationship between Books and Authors.
+##### Kitob Sotuvlari Jadvali
+- **id**: Jadvalning asosiy kaliti (Primary Key), avtomatik oshiriladigan, butun son (`SERIAL`).
+- **kitob_id**: Kitoblar jadvalidagi kitobning identifikatoriga bog'lanish (Foreign Key), butun son (`INTEGER`), kitoblar jadvalidagi `id` ustuniga bog'liq.
+- **sana**: Sotuv sanasi, sanani saqlash uchun (`DATE`).
+- **sotilgan_soni**: Sotilgan kitoblar soni, butun son (`INTEGER`).
 
-Columns:
+##### Kitob Sharhlari Jadvali
+- **id**: Jadvalning asosiy kaliti (Primary Key), avtomatik oshiriladigan, butun son (`SERIAL`).
+- **kitob_id**: Kitoblar jadvalidagi kitobning identifikatoriga bog'lanish (Foreign Key), butun son (`INTEGER`), kitoblar jadvalidagi `id` ustuniga bog'liq.
+- **mijoz_id**: Mijozlar jadvalidagi mijozning identifikatoriga bog'lanish (Foreign Key), butun son (`INTEGER`), mijozlar jadvalidagi `id` ustuniga bog'liq.
+- **matn**: Sharh matni, matn turi (`TEXT`).
+- **baho**: Berilgan baho, butun son (`INTEGER`).
 
-- book_id (Foreign Key): References the Books table.
-- author_id (Foreign Key): References the Authors table.
+**Kun 2: Ma'lumot Kiritish va Hisobotlar Yaratish**
 
+- **Vazifa 4**: Har bir yaratilgan jadvalga dastlabki ma'lumotlarni kiritish.
+- **Vazifa 5**: Mualliflar bo'yicha umumiy sotilgan kitoblar soni va daromadni hisoblash uchun hisobotlar tuzish.
+- **Vazifa 6**: O'rtacha baho bo'yicha eng yaxshi baholangan kitoblar ro'yxatini tuzish uchun hisobotlar tuzish.
 
-## 4. Publishers Table
-Purpose: Stores information about book publishers.
+**Kun 3: So'rovlarni Amalga Oshirish**
 
-Columns:
+- **Vazifa 7**: Har bir muallif uchun eng qimmat va eng arzon kitoblarini topish uchun murakkab so'rovlar ishlatish.
+- **Vazifa 8**: Har bir kitob turkumiga ko'ra eng ko'p sotilgan kitoblar ro'yxatini tuzish.
 
-- publisher_id (Primary Key): Unique identifier for each publisher.
-- name: Name of the publisher.
-- address: Publisher's address.
-- phone: Contact phone number.
-- email: Contact email address.
+#### Umumiy Ko'rsatmalar
 
-## 5. Categories Table
-Purpose: Defines the categories or genres of books.
-
-Columns:
-
-- category_id (Primary Key): Unique identifier for each category.
-- category_name: Name of the category (e.g., Fiction, Non-fiction).
--description: Description of the category.
-
-
-## 6. Customers Table
-Purpose: Holds information about customers who purchase books.
-
-Columns:
-
-- customer_id (Primary Key): Unique identifier for each customer.
-- first_name: Customer's first name.
-- last_name: Customer's last name.
-- email: Contact email address.
-- phone: Contact phone number.
-- address: Customer's address.
-
-
-## 7. Orders Table
-Purpose: Records orders placed by customers.
-
-Columns:
-
-- order_id (Primary Key): Unique identifier for each order.
-- customer_id (Foreign Key): References the Customers table.
-- order_date: Date when the order was placed.
-- status: Current status of the order (e.g., Pending, Shipped, Completed).
-
-
-## 8. OrderItems Table
-Purpose: Details the specific books included in each order.
-
-Columns:
-
-- order_item_id (Primary Key): Unique identifier for each order item.
-- order_id (Foreign Key): References the Orders table.
-- book_id (Foreign Key): References the Books table.
-- quantity: Number of copies of the book ordered.
-- unit_price: Price of the book at the time of the order.
+- Har bir jadval uchun kerakli `FOREIGN KEY` bog'lanishlarini o'rnatishga ishonch hosil qiling. Bog'lanishlar o'zgarishlar va o'chirish amallarida mos ravishda kaskadli yangilanishlar va o'chirishlar yoki NULL qiymatlar qo'yilishini ta'minlashi kerak.
+- Hisobotlar tuzishda `JOIN`, `GROUP BY`, `ORDER BY` va boshqa zarur SQL operatorlaridan foydalaning.
+- Barcha vazifalar aniq va tushunarli tarzda bajarilishi kerak, har bir amal qadam-qadam ko'rsatilgan bo'lishi kerak.
